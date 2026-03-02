@@ -1,0 +1,36 @@
+{
+  "name": "production-scheduler",
+  "version": "1.0.0",
+  "description": "Production schedule reflow system for manufacturing facilities",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/index.ts",
+    "demo": "tsx src/index.ts",
+    "scenario:delay": "tsx src/scenarios/delay-cascade.ts",
+    "scenario:maintenance": "tsx src/scenarios/maintenance-conflict.ts",
+    "scenario:shift": "tsx src/scenarios/shift-spanning.ts",
+    "scenario:complex": "tsx src/scenarios/complex-multi-constraint.ts",
+    "scenario:all": "tsx src/scenarios/run-all.ts",
+    "scenario:scale": "tsx src/scenarios/large-scale.ts",
+    "scenario:scale:small": "tsx src/scenarios/large-scale.ts --small",
+    "scenario:scale:medium": "tsx src/scenarios/large-scale.ts --medium",
+    "scenario:scale:large": "tsx src/scenarios/large-scale.ts --large",
+    "scenario:scale:stress": "tsx src/scenarios/large-scale.ts --stress",
+    "test": "tsx src/tests/run-tests.ts",
+    "validate": "tsc --noEmit"
+  },
+  "keywords": [
+    "production",
+    "scheduler",
+    "manufacturing",
+    "reflow"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
